@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "educations")
 public class Education {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private String titulo;
@@ -23,5 +23,7 @@ public class Education {
     private Date fechaFin;
     private String descripcion;
     private String localidad;
+    private String link;
+    private String imagen;
 
 }

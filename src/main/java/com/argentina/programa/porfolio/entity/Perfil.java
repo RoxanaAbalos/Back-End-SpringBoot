@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name = "perfiles")
 public class Perfil {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private Integer dni;
@@ -25,6 +25,7 @@ public class Perfil {
     private String banner;
     private String acerca;
     private String ciudad;
+    private String titulo;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "skill_id")
     private List<Skill> skills;

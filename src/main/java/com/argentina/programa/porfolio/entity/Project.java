@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "projects")
 public class Project {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private String titulo;
@@ -19,4 +19,5 @@ public class Project {
     private Date fecha;
     private String link;
     private String imagen;
+    private String git;
 }
