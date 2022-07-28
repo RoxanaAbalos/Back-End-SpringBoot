@@ -20,7 +20,7 @@ INSERT INTO educations (instituto,localidad,descripcion,titulo,imagen,education_
 INSERT INTO educations (instituto,localidad,descripcion,titulo,imagen,education_id) VALUES ('Oracle - Alura ','San Salvador de Jujuy','Progrmama Alura y Oracle Bootcamp 6 mese Dev Full Stack','Aula Latam de Oracle Beca - Dev Full Stack','https://arrecifesnoticias.com/wp-content/uploads/2015/01/Universidad-Siglo-21.jpg','1');
 
 /* Creamos algunos usuarios con sus roles */
-INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('Roxana','$2a$10$l8Y85ZaefOAP7dkrTwjHMubLGNrG9MypciZS7qkrOPZoaRzjdjEc2',1, 'Noelia', 'Abalos','anoeli99900@gmail.com');
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('roxana','$2a$10$l8Y85ZaefOAP7dkrTwjHMubLGNrG9MypciZS7qkrOPZoaRzjdjEc2',1, 'Noelia', 'Abalos','anoeli99900@gmail.com');
 INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('admin','$2a$10$jEeVMrKxP7vio4LxJWlr8uSYb2HTG/Z/nvFD3lZSmqquG9QUVRu0m',1, 'Admin', 'Admin','noeliaroxana@gmail.com');
 
 INSERT INTO `roles` (nombre) VALUES ('ROLE_USER');
