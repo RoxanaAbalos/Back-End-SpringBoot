@@ -9,6 +9,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -53,7 +54,7 @@ public class PerfilrestController {
         }
         return new ResponseEntity<Perfil>(perfil, HttpStatus.OK);
     }
-
+    @Secured("ROLE_ADMIN")
     @PostMapping("/perfil")
     public ResponseEntity<?> create(@RequestBody Perfil perfil) {
         Perfil perfilNew =null;
@@ -71,7 +72,7 @@ public class PerfilrestController {
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
 
-
+    @Secured("ROLE_ADMIN")
     @PutMapping("/perfil/{id}")
     public ResponseEntity<?> update (@RequestBody Perfil perfil ,@PathVariable Long id){
 
@@ -97,7 +98,7 @@ public class PerfilrestController {
         response.put("perfil", perfilUpdate);
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
-
+    @Secured("ROLE_ADMIN")
     @DeleteMapping("/perfil/{id}")
     public ResponseEntity<?>  delete(@PathVariable Long id) {
         Map<String,Object> response = new HashMap<>();
@@ -111,6 +112,7 @@ public class PerfilrestController {
         response.put("mensaje", "Perfil ha sido eliminado con exito!");
         return new ResponseEntity<Map<String,Object>>(response, HttpStatus.OK);
     }
+    @Secured("ROLE_ADMIN")
     @PostMapping("/perfil/upload")
     public ResponseEntity<?> upload(@RequestParam("archivo") MultipartFile archivo, @RequestParam("id") Long id) {
         Map<String, Object> response = new HashMap<>();

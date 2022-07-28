@@ -18,3 +18,13 @@ INSERT INTO workeds (puesto,localidad,empleador,descripcion,worked_id) VALUES ('
 INSERT INTO educations (instituto,localidad,descripcion,titulo,imagen,education_id) VALUES ('Universidad Nacional de Jujuy Ingieneria','San Salvador de Jujuy','Nivel universitario','Analista Programador Universitario','https://arrecifesnoticias.com/wp-content/uploads/2015/01/Universidad-Siglo-21.jpg','1');
 INSERT INTO educations (instituto,localidad,descripcion,titulo,imagen,education_id) VALUES ('INTI','San Salvador de Jujuy','Programa Nacional Progrmador Full Stack Jr 12 mese','Argentina Programa - Dev Full Stack','https://arrecifesnoticias.com/wp-content/uploads/2015/01/Universidad-Siglo-21.jpg','1');
 INSERT INTO educations (instituto,localidad,descripcion,titulo,imagen,education_id) VALUES ('Oracle - Alura ','San Salvador de Jujuy','Progrmama Alura y Oracle Bootcamp 6 mese Dev Full Stack','Aula Latam de Oracle Beca - Dev Full Stack','https://arrecifesnoticias.com/wp-content/uploads/2015/01/Universidad-Siglo-21.jpg','1');
+
+/* Creamos algunos usuarios con sus roles */
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('Roxana','$2a$10$l8Y85ZaefOAP7dkrTwjHMubLGNrG9MypciZS7qkrOPZoaRzjdjEc2',1, 'Noelia', 'Abalos','anoeli99900@gmail.com');
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('admin','$2a$10$jEeVMrKxP7vio4LxJWlr8uSYb2HTG/Z/nvFD3lZSmqquG9QUVRu0m',1, 'Admin', 'Admin','noeliaroxana@gmail.com');
+
+INSERT INTO `roles` (nombre) VALUES ('ROLE_USER');
+INSERT INTO `roles` (nombre) VALUES ('ROLE_ADMIN');
+INSERT INTO `usuarios_roles` (usuario_id, role_id) VALUES (1, 1);
+INSERT INTO `usuarios_roles` (usuario_id, role_id) VALUES (2, 2);
+INSERT INTO `usuarios_roles` (usuario_id, role_id) VALUES (2, 1);
